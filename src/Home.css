@@ -9,7 +9,7 @@ body {
     font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
     color: #0b38a3;
     font-size:1.3em;
-    background-color:#03236a;
+    background-color:#ffffff;
 }
 
 h1 {
@@ -67,6 +67,22 @@ a:hover {
 
 /** MENU */
 
+.circle{
+    width: 200px;
+    height: 200px;
+    border: 5px solid #0b38a3;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.circle-text{
+    font-size: 1.5em;
+    text-align: center;
+}
+
 #menu {
     width: 700px;
     height: 30px;
@@ -93,11 +109,11 @@ a:hover {
     text-decoration: none;
     font-size: smaller;
     font-weight: bold;
-    color: #FFFFFF;
+    color: #717171;
 }
 
 #menu a:hover {
-    color: #e8edf9;
+    color: #d0d0d0;
 }
 
 /** CONTENT */
@@ -106,15 +122,6 @@ a:hover {
     width: 700px;
     margin: 0px auto;
     background: url(images/img04.gif) repeat-y left top;
-}
-
-#columnA {
-    padding: 20px;
-}
-
-
-#columnB h2 {
-    font-size: large;
 }
 
 /** FOOTER */
