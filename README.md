@@ -2,6 +2,8 @@
 ## Structure
 ...
 ## Idea Collection
+### Youtube
+### CodePen
  - spinning circles: https://codepen.io/Gogh/pen/gOqVqBx
 
 ## Organisation
