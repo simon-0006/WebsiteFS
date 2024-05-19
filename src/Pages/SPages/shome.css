@@ -1,3 +1,8 @@
+.circle_container{
+    display: flex;
+    gap: 15px;
+}
+
 .circle {
     width: 200px;
     height: 200px;
