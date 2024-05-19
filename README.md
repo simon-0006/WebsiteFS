@@ -7,6 +7,7 @@
 ## Idea Collection
 
 ### Youtube
+ - Channel: Hyperplex
 
 ### CodePen
 
