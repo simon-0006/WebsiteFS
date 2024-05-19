@@ -1,8 +1,14 @@
 /** BASIC */
 
-html {
-    font-size: 62.5%;    
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden; /* Prevent vertical scrolling */
 }
+
 
 body {
     margin: 30px 0px 30px 0px;
@@ -10,59 +16,84 @@ body {
     color: #0b38a3;
     font-size:1.3em;
     background-color:#ffffff;
+  
+.scroller-container {
+  height: 100vh;
+  overflow-x: auto;
+  overflow-y: hidden; /* Prevent vertical scrolling */
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
+}
+
+.scroller {
+  height: 100%;
+}
+
+.item {
+  display: inline-block;
+  width: 100vw; /* Full width of the viewport */
+  height: 100vh; /* Full height of the viewport */
+  background-color: #f1f1f1;
+  text-align: center;
+  line-height: 100vh; /* Center content vertically */
+  border: 1px solid #000;
+  box-sizing: border-box; /* Include border in width/height */
 }
 
 h1 {
-    font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
-    font-size: 2.5em;
-    font-weight: normal;
-    letter-spacing: -1px;
-    /* text-transform: lowercase; */
+  font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+  font-size: 2.5em;
+  font-weight: normal;
+  letter-spacing: -1px;
+  /* text-transform: lowercase; */
 }
-h2, h3, h4, h5, h6 {
-    font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
-    font-size: 2em;
-    font-weight: normal;
-    color: #070d1b;
-    /* text-transform: lowercase; */
-    letter-spacing: -1px;
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+  font-size: 2em;
+  font-weight: normal;
+  color: #070d1b;
+  /* text-transform: lowercase; */
+  letter-spacing: -1px;
 }
 
 ul {
-    margin-left: 0px;
-    padding-left: 0px;
-    list-style-type: none;
+  margin-left: 0px;
+  padding-left: 0px;
+  list-style-type: none;
 }
 
 a {
-    color: #274690;
+  color: #274690;
 }
 
 a:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
-
 
 /** HEADER */
 
 #header {
-    width: 700px;
-    height: 80px;
-    margin: 0px auto;
-    background: #c3d1f0 url(images/img01.gif) no-repeat left top;
+  width: 700px;
+  height: 80px;
+  margin: 0px auto;
+  background: #c3d1f0 url(images/img01.gif) no-repeat left top;
 }
 
 #header h1 {
-    float: left;
-    margin: 0px;
-    padding: 35px 0px 0px 20px;
+  float: left;
+  margin: 0px;
+  padding: 35px 0px 0px 20px;
 }
 
 #header h2 {
-    float: right;
-    margin: 0px;
-    padding: 43px 10px 0px 0px;
-    background: url(images/img02.gif) no-repeat right top;
+  float: right;
+  margin: 0px;
+  padding: 43px 10px 0px 0px;
+  background: url(images/img02.gif) no-repeat right top;
 }
 
 /** MENU */
@@ -84,20 +115,20 @@ a:hover {
 }
 
 #menu {
-    width: 700px;
-    height: 30px;
-    margin: 0px auto;
-    /*background: url(images/img03.gif) repeat-x left top;*/
+  width: 700px;
+  height: 30px;
+  margin: 0px auto;
+  /*background: url(images/img03.gif) repeat-x left top;*/
 }
 
 #menu ul {
-    margin: 0px;
-    padding: 0px;
-    list-style: none;
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
 }
 
 #menu li {
-    display: inline;
+  display: inline;
 }
 
 #menu a {
@@ -113,31 +144,33 @@ a:hover {
 }
 
 #menu a:hover {
-    color: #d0d0d0;
+  color: #e8edf9;
 }
 
 /** CONTENT */
 
 #content {
-    width: 700px;
-    margin: 0px auto;
-    background: url(images/img04.gif) repeat-y left top;
+  width: 700px;
+  margin: 0px auto;
+  background: url(images/img04.gif) repeat-y left top;
 }
 
 /** FOOTER */
 
 #footer {
-    width: 700px;
-    margin: 0px auto;
-    background: #c3d1f0 url(images/img05.gif) no-repeat left bottom;
+  width: 700px;
+  margin: 0px auto;
+  background: #c3d1f0 url(images/img05.gif) no-repeat left bottom;
 }
 
 #footer p {
-    margin: 0px;
-    padding: 15px 20px;
-    background: url(images/img06.gif) no-repeat right bottom;
-    font-size: smaller;
-    color: #274690;
+  margin: 0px;
+  padding: 15px 20px;
+  background: url(images/img06.gif) no-repeat right bottom;
+  font-size: smaller;
+  color: #274690;
 }
 
-pre { font-size:1.1em;}
+pre {
+  font-size: 1.1em;
+}
