@@ -7,6 +7,7 @@ body {
     background-color: #f0f0f0;
 }
 
+/** CIRCLE Container, links and classes*/
 .circle_container{
     position: relative;
     width: 100%;
@@ -14,44 +15,106 @@ body {
     display: flex;    
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
-.circle {
+.circle-link, .circle {
+    display: flex;
     width: 20vmin;
     height: 20vmin;
-    border: 5px solid #222834;
+    border: 5px solid #2228344f;
     border-radius: 50%;
-    display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
   }
 
 .circle1 {
-    border-color: red;
-    background-color: rgb(255, 0, 0, 0.1);
-    left: 20%;
-    top: 50%;
+    border-color: rgb(140, 140, 140);
+    background-color: rgba(153, 153, 153, 0.1);
+    left: 50%;
+    top: 48%;
     transform: translate(-50%, -50%);
-  }
+    /* animation: moveCircle1 4s linear; */
+}
 
   .circle2 {
-    border-color: green;
-    background-color: rgb(0, 255, 0, 0.1);
-    left: 35%;
-    top: 50%;
+    border-color: rgb(86, 86, 86);
+    background-color: rgba(171, 171, 171, 0.1);
+    left: 45%;
+    top: 55%;
     transform: translate(-50%, -50%);
+    /* animation: moveCircle2 4s linear; */
   }
 
   .circle3 {
-    border-color: blue;
-    background-color: rgb(0, 0, 255, 0.1);
-    left: 50%;
-    top: 50%;
+    border-color: rgb(139, 139, 139);
+    background-color: rgba(109, 109, 109, 0.1);
+    left: 55%;
+    top: 55%;
     transform: translate(-50%, -50%);
+    /* animation: moveCircle3 4s linear; */
   }
   
   .circle-text {
     font-size: 1.5em;
     text-align: center;
   }
+
+  a {
+    display: block;
+  }
+
+  .circle:hover {
+    background-color: #8398c237;
+  }
+
+  /** Animation */
+
+  /** Move from Corner to mid*/
+
+  .move1 {
+    animation: moveCircle1 1s linear;
+  }
+
+  .move2 {
+    animation: moveCircle2 1s linear;
+  }
+
+  .move3 {
+    animation: moveCircle3 1s linear;
+  }
+
+  @keyframes moveCircle1 {
+    0% {
+        top: 20%;
+        left: 50%;
+    }
+    100% {
+        top: 48%;
+        left: 50%;
+    }
+  }
+
+  @keyframes moveCircle2 {
+    0% {
+        top: 80%;
+        left: 20%;
+    }
+    100% {
+        top: 55%;
+        left: 45%;
+    }
+  }
+
+  @keyframes moveCircle3 {
+    0% {
+        top: 80%;
+        left: 70%;
+    }
+    100% {
+        top: 55%;
+        left: 55%;
+    }
+  }
+  
