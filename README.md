@@ -1,6 +1,9 @@
 # WebsiteFS
 ## Structure
 ...
+## Idea Collection
+ - spinning circles: https://codepen.io/Gogh/pen/gOqVqBx
+
 ## Organisation
 Link: https://n.ethz.ch/~sganter/
 
