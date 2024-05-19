@@ -1,1 +1,2 @@
-this is a test file and it work
+this is a test file and it doesn't work
+hey, we fixed the bug
