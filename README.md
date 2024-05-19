@@ -22,5 +22,3 @@ Link: https://n.ethz.ch/~sganter/
 **VS Code**:  
 Download _Live Server extension_  
 Run Local hosted Website by CMD + L + O
-
-test
