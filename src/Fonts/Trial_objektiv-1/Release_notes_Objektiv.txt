@@ -1,0 +1,58 @@
+==Release notes Objektiv, Objektiv VF==
+
+Compiler of release notes: Dalton Maag
+Designer: Dalton Maag
+Designer URL: daltonmaag.com
+
+Release date: 2021-08-05
+
+Change log:
+- v2.101: Fixed naming for SemiBold weights. Fixed kern table values.
+- v2.100: Added Hair and SemiBold weights, library subsets.
+- v2.010: Added screen optimization to VF; updated vertical metrics.
+- v2.001: Fixed alphatonos and upsilondieresis to Mk3 and Mk2.
+- v2.000: Added Greek and Cyrillic.
+- v1.000: This is the first release.
+
+Basic information 
+1 Font name:
+    - Static: Objektiv
+    - Variable: Objektiv VF
+2 TrueType Version record: 2.101
+3 Character Set: All European Latin, Greek, Cyrillic
+4 Supported scripts: Latin, Greek, Cyrillic
+5 Number of glyphs:
+    - Static: 819
+    - Variable: 887
+6 Static weights: Hair, Hair Italic, Thin, Thin Italic, Light, Light Italic, Regular, Italic, Medium, Medium Italic, SemiBold, SemiBold Italic, Bold, Bold Italic, XBold, XBold Italic, Black, Black Italic
+7 Usage: Text and Display
+8 Number of axes: 2
+9 Axes:
+    - Weight
+        tag: wght
+        range: 100 (Hair) - 900 (Black)
+    - Italic
+        tag: ital
+        range: 0 (Upright) - 1 (Italic)
+10 Named instances: Hair, Hair Italic, Thin, Thin Italic, Light, Light Italic, Regular, Italic, Medium, Medium Italic, SemiBold, SemiBold Italic, Bold, Bold Italic, XBold, XBold Italic, Black, Black Italic
+11 Default instances: 
+		Wght: Regular
+		WghtItal: Regular
+
+Technology
+1 File formats: 
+    - Static: The files have been delivered in the TrueType-based OpenType format, for use in all major Operating Systems, and also as TTF for use in apps, and in web font format: WOFF; WOFF2.
+    - Variable: The files have been delivered as variable fonts in the TrueType-based OpenType format, for use in all major Operating Systems, and also as TTF for use in apps, and in web font format: WOFF2.
+2 Embedding settings: Editing of the document is allowed (editable mode); subsetting is allowed.
+3 Hinting information: PixelFix CTAA screen optimization technology.
+4 Default numerals: Tabular. Proportional numerals accessible via OpenType features.
+
+Other Information
+There are 3 sets of alternates:
+Stylistic set 'ss01' is used for Mk1 alternates.
+Stylistic set 'ss02' is used for Mk2 alternates.
+Stylistic set 'ss03' is used for Mk3 alternates.
+
+For each stylistic set there is a corresponding set of static fonts with the name of the set added to the family name.
+
+Stylistic set 'ss04' disables the Dutch ij ligature.

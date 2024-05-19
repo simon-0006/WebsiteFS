@@ -1,13 +1,28 @@
 /** BASIC */
 
-/* styles.css */
-/* styles.css */
+@font-face {
+  font-family: "AKON";
+  src: url("/src/Fonts/AKONY/AKONY.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "OBJEKTIV";
+  src: url("../fonts/Trial_objektiv-1/TrialStaticFonts/ObjektivMk2_Trial_Bd.ttf")
+    format("truetype");
+}
+
 body {
-  font-family: Objectiv Mk2, sans-serif;
   margin: 0;
   padding: 0;
   height: 100vh;
   overflow: hidden; /* Prevent vertical scrolling */
+}
+
+.black-line {
+  width: 100vw; /* Full width of the viewport */
+  height: 260px; /* Height of the line */
+  background-color: #000000; /* Black color */
+  z-index: 1;
 }
 
 .scroller-container {
@@ -22,18 +37,28 @@ body {
   height: 100%;
 }
 
+/* styles.css */
+
 .item {
   display: inline-block;
   width: 100vw; /* Full width of the viewport */
   height: 100vh; /* Full height of the viewport */
   background-color: #ffffff;
-  text-align: center;
-  font-family: "Objectiv mk2", sans-serif;
-  font-weight: 100;
-  font-size: 6em;
-  line-height: 100vh; /* Center content vertically */
+  line-height: 45vh; /* Center content vertically */
   box-sizing: border-box; /* Include border in width/height */
 }
+
+/* Style for item content */
+.item-content {
+  color: #000000;
+  font-family: "AKON";
+  text-align: left;
+  margin-left: 8%;
+  font-weight: 100;
+  font-size: 7em;
+}
+
+/* Style for the black line */
 
 ul {
   margin-left: 0px;
@@ -47,4 +72,5 @@ a {
 
 a:hover {
   text-decoration: none;
+  color: #274690;
 }
