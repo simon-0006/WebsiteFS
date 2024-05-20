@@ -24,7 +24,7 @@ body {
 .cursor {
   width: 30px;
   height: 30px;
-  border: 1.5px solid #3700ff;
+  border: 1.5px solid #000000;
   border-radius: 43%;
   position: fixed;
   z-index: 5;
@@ -36,7 +36,7 @@ body {
 .dot {
   width: 8px;
   height: 8px;
-  background-color: #3700ff;
+  background-color: #000000;
   border-radius: 50%;
   position: fixed;
   z-index: 5;
