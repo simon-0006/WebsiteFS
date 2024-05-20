@@ -1,23 +1,40 @@
+const pageWidth = document.documentElement.scrollWidth;
+const pageHeight = document.documentElement.scrollHeight;
+console.log(`Page width: ${pageWidth}, Page height: ${pageHeight}`);
+
 const container = document.querySelector('.circle_container');
-const radiusX = 100; // Horizontal radius of the ellipse
-const radiusY = 200;  // Vertical radius of the ellipse
+const circleTemp = document.querySelector('.circle1');
+let centerX = container.offsetWidth / 2 + circleTemp.offsetWidth/2;
+let centerY = container.offsetHeight / 2 + circleTemp.offsetHeight/2;
+let radiusX = 100; // Horizontal radius of the ellipse
+let radiusY = 200;  // Vertical radius of the ellipse
+
+// MOUSE CONTROL
+let mouseX, mouseY;
+
+document.addEventListener('mousemove', function(e) {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    radiusX = (e.clientX/pageWidth)*200;
+    radiusY = (e.clientY/pageHeight)*300;
+});
 
 
+function moveInEllipse(circle, duration, timestamp) {
+    centerX = 0.99*(centerX) + 0.01*(mouseX + circleTemp.offsetWidth/2);
+    centerY = 0.99*(centerY) + 0.01*(mouseY + circleTemp.offsetHeight/2);
 
-function moveInEllipse(circle, centerX, centerY, duration, timestamp) {
     const time = (timestamp % duration) / duration;
     const angle = time * 2 * Math.PI;
     const x = centerX + radiusX * Math.cos(angle) - circle.offsetWidth / 2;
     const y = centerY + radiusY * Math.sin(angle) - circle.offsetHeight / 2;
     circle.style.left = `${x}px`;
     circle.style.top = `${y}px`;
-    requestAnimationFrame((timestamp) => moveInEllipse(circle, centerX, centerY, duration, timestamp));
+    requestAnimationFrame((timestamp) => moveInEllipse(circle, duration, timestamp));
 }
 
 function moveCircles() {
     const circles = document.querySelectorAll('.circle');
-    let centerX = container.offsetWidth / 2;
-    let centerY = container.offsetHeight / 2;
     let duration = 5000; // Duration of one full loop in milliseconds
     
     circles.forEach(function(circle) {
@@ -39,8 +56,7 @@ function moveCircles() {
                 type = 3;
             }
             circle.classList.remove(`move${type}`);
-            let width = circle.getBoundingClientRect().width;
-            circle.classList.add(moveInEllipse(circle, centerX + width/2, centerY + width/2, duration*type, 0));
+            circle.classList.add(moveInEllipse(circle, duration*type, performance.now()));
         });
     });
 }
