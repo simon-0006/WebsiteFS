@@ -35,7 +35,8 @@ body {
     left: 50%;
     top: 48%;
     transform: translate(-50%, -50%);
-    /* animation: moveCircle1 4s linear; */
+    animation: moveCircle1 4s linear;
+    z-index: 2;
 }
 
   .circle2 {
@@ -45,6 +46,7 @@ body {
     top: 55%;
     transform: translate(-50%, -50%);
     /* animation: moveCircle2 4s linear; */
+    z-index: 1;
   }
 
   .circle3 {
@@ -54,6 +56,7 @@ body {
     top: 55%;
     transform: translate(-50%, -50%);
     /* animation: moveCircle3 4s linear; */
+    z-index: 0;
   }
   
   .circle-text {

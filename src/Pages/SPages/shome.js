@@ -21,13 +21,17 @@ document.addEventListener('mousemove', function(e) {
 
 
 function moveInEllipse(circle, duration, timestamp) {
-    centerX = 0.99*(centerX) + 0.01*(mouseX + circleTemp.offsetWidth/2);
-    centerY = 0.99*(centerY) + 0.01*(mouseY + circleTemp.offsetHeight/2);
+    centerX = 0.995*(centerX) + 0.005*(mouseX + circleTemp.offsetWidth/2);
+    centerY = 0.999*(centerY) + 0.001*(mouseY + circleTemp.offsetHeight/2);
 
     const time = (timestamp % duration) / duration;
     const angle = time * 2 * Math.PI;
-    const x = centerX + radiusX * Math.cos(angle) - circle.offsetWidth / 2;
-    const y = centerY + radiusY * Math.sin(angle) - circle.offsetHeight / 2;
+    let x = centerX + radiusX * Math.cos(angle) - circle.offsetWidth / 2;
+    let y = centerY + radiusY * Math.sin(angle) - circle.offsetHeight / 2;
+    x = Math.min(pageWidth, x);
+    x = Math.max(0, x);
+    y = Math.min(pageHeight, y);
+    y = Math.max(0, y);
     circle.style.left = `${x}px`;
     circle.style.top = `${y}px`;
     requestAnimationFrame((timestamp) => moveInEllipse(circle, duration, timestamp));
@@ -46,17 +50,6 @@ function moveCircles() {
         } else {
             type = 3;
         }
-        circle.classList.add(`move${type}`);
-        circle.addEventListener('animationend', () => {
-            if (circle && circle.classList.contains('circle1')) {
-                type = 1;
-            } else if (circle && circle.classList.contains('circle2')) {
-                type = 2;
-            } else {
-                type = 3;
-            }
-            circle.classList.remove(`move${type}`);
-            circle.classList.add(moveInEllipse(circle, duration*type, performance.now()));
-        });
+        circle.classList.add(moveInEllipse(circle, duration*type, performance.now()));
     });
 }
