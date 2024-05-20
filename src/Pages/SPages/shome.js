@@ -19,6 +19,10 @@ document.addEventListener('mousemove', function(e) {
     radiusY = (e.clientY/pageHeight)*300;
 });
 
+circleTemp.addEventListener('animationend', function() {
+    moveCircles();
+});
+
 
 function moveInEllipse(circle, duration, timestamp) {
     centerX = 0.995*(centerX) + 0.005*(mouseX + circleTemp.offsetWidth/2);
