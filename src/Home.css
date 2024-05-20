@@ -11,19 +11,58 @@
     format("truetype");
 }
 
+/* CursorGrafik*/
+
 body {
+  cursor: none;
   margin: 0;
   padding: 0;
   height: 100vh;
-  overflow: hidden; /* Prevent vertical scrolling */
+  overflow: hidden;
 }
+
+.cursor {
+  width: 30px;
+  height: 30px;
+  border: 1.5px solid #3700ff;
+  border-radius: 43%;
+  position: fixed;
+  z-index: 5;
+  pointer-events: none;
+  opacity: 0;
+  transition: transform 50ms ease-out;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background-color: #3700ff;
+  border-radius: 50%;
+  position: fixed;
+  z-index: 5;
+  pointer-events: none;
+  opacity: 0;
+}
+
+body:hover .cursor,
+body:hover .dot {
+  opacity: 1;
+}
+
+a:hover {
+  cursor: none;
+}
+
+/*Visual Linie*/
 
 .black-line {
   width: 100vw; /* Full width of the viewport */
   height: 260px; /* Height of the line */
   background-color: #000000; /* Black color */
-  z-index: 1;
+  pointer-events: none;
 }
+
+/* Horizontal Scroller*/
 
 .scroller-container {
   height: 100vh;
@@ -67,10 +106,5 @@ ul {
 }
 
 a {
-  color: #274690;
-}
-
-a:hover {
-  text-decoration: none;
-  color: #274690;
+  color: #000000;
 }
