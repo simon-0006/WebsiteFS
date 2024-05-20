@@ -25,12 +25,12 @@ body {
   width: 30px;
   height: 30px;
   border: 1.5px solid #000000;
-  border-radius: 43%;
+  border-radius: 20%;
   position: fixed;
   z-index: 5;
   pointer-events: none;
   opacity: 0;
-  transition: transform 50ms ease-out;
+  transition: transform 35ms ease-out;
 }
 
 .dot {
@@ -87,12 +87,21 @@ a:hover {
   box-sizing: border-box; /* Include border in width/height */
 }
 
+h1 {
+  color: #000000;
+  font-family: "AKON";
+  text-align: left;
+  margin-left: 7%;
+  font-weight: 100;
+  font-size: 7em;
+}
+
 /* Style for item content */
 .item-content {
   color: #000000;
   font-family: "AKON";
   text-align: left;
-  margin-left: 8%;
+  margin-left: 7%;
   font-weight: 100;
   font-size: 7em;
 }
