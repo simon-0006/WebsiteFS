@@ -35,7 +35,7 @@ body {
     transform: translateY(-50%) scale(1.1);
 }
 
-/* define Subclasses Rectanlge 1,2,3 */
+/* define Subclasses Rectanlge 1,2,3 ------------------- */
 .rectangle1 {
     top: 25%;
     left: -100%;
@@ -57,6 +57,8 @@ body {
     width: 35vw;
     height: 50vh;
 }
+
+/* ------------------------------------------------------ */
 
 .rectangletext {
     text-align: center;
