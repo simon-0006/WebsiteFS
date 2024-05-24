@@ -60,7 +60,7 @@ class PointerParticles extends HTMLElement {
 
     this.canvas;
     this.ctx;
-    this.fps = 60;
+    this.fps = 35;
     this.msPerFrame = 1000 / this.fps;
     this.timePrevious;
     this.particles = [];
