@@ -1,28 +1,45 @@
-* {
+/* General Reset and Box Sizing */
+body,
+html {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  transition: 0.75s ease;
 }
+
+/* Transition for specific elements */
+#grid,
+.left,
+.right,
+.middle {
+  transition: 0.8s ease;
+}
+
+/* Body styling */
 body {
   min-height: 100vh;
   display: grid;
   place-items: center;
   gap: 4rem;
-  background: #b8860b;
+  background: #211400;
 }
+
+/* Grid container styling */
 #grid {
-  width: calc(100% - 20vmin);
-  aspect-ratio: 16 / 7;
-  background: linen;
+  position: relative; /* Change to absolute or fixed if needed */
+  top: 15%; /* Adjust as needed */
+  left: 0%; /* Adjust as needed */
+  width: calc(100% - 40vmin);
+  aspect-ratio: 18 / 7;
+  background: rgb(45, 22, 0);
   display: grid;
   grid-template-columns: 1fr 0fr 1fr;
   place-items: center;
-  outline: 2px solid #804a00;
+  outline: 2px solid #000000;
   border-radius: 5vmin;
-  box-shadow: 0 1rem 2rem -1rem rgba(68 50 4 / 1);
   overflow: hidden;
 }
+
+/* Section styling within the grid */
 .left,
 .right,
 .middle {
@@ -32,19 +49,46 @@ body {
   background-position: center;
   transform-origin: center;
 }
+
 .left {
   background-image: url("https://assets.codepen.io/4787486/hamster-3.jpg");
-  border-right: 1px solid #804a00;
+  border-right: 1px solid #000000;
 }
+
 .middle {
   font-size: 0rem;
   background-image: url("https://assets.codepen.io/4787486/hamster-4.jpg");
 }
+
 .right {
   background-image: url("https://assets.codepen.io/4787486/hamster-2.jpg");
-  border-left: 1px solid #804a00;
+  border-left: 1px solid #000000;
 }
 
 #grid:hover {
   grid-template-columns: 0fr 1fr 0fr;
+}
+
+/* Specific Hamster styling */
+.Hamster {
+  position: absolute;
+  top: 73%;
+  left: 11%;
+  z-index: 5;
+  color: #ddae02;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 7.5em;
+  font-weight: 600;
+}
+
+/* Ensure the list and link are not affected by .Hamster styles */
+li {
+  list-style: none;
+  margin-top: 200px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1em;
 }
