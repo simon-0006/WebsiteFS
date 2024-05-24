@@ -2,7 +2,12 @@
     font-family: "OBJEKTIV";
     src: url("../../../Fonts/Trial_objektiv-1/TrialStaticFonts/ObjektivMk2_Trial_Bd.ttf")
       format("truetype");
-  }
+}
+@font-face {
+    font-family: "LARKEN";
+    src: url("../../../Fonts/Larken\ Serif\ Trial/LarkenDEMO-Bold.otf")
+      format("opentype");
+}
 
 body {
     font-family: Arial, sans-serif;
@@ -27,12 +32,20 @@ body {
     transition: left 2s, opacity 1s, transform 0.3s;
     opacity: 0.5; /* Start invisible */
     transform: translateY(-50%);
+
+    /* Font */
+    font-family: "OBJEKTIV";
+    font-size: 40px;
+    color: rgb(255, 255, 255);
 }
 
 /* define hover Effekt */
 .rectangle:hover {
     background-color: rgb(64, 64, 64);
     transform: translateY(-50%) scale(1.1);
+    font-family: "LARKEN";
+    font-size: 50px;
+    color: rgb(255, 246, 217);
 }
 
 /* define Subclasses Rectanlge 1,2,3 ------------------- */
@@ -62,9 +75,6 @@ body {
 
 .rectangletext {
     text-align: center;
-    font-size: 40px;
-    font-family: "OBJEKTIV";
-    color: rgb(255, 255, 255);
 }
 
 .visibleLeft {
