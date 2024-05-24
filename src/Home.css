@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: "AKON";
-  src: url("/src/Fonts/AKONY/AKONY.ttf") format("truetype");
+  src: url("Fonts/AKONY/AKONY.ttf") format("truetype");
 }
 
 @font-face {
