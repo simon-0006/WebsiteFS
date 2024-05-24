@@ -73,7 +73,7 @@ body {
 .Hamster {
   position: absolute;
   top: 73%;
-  left: 11%;
+  left: 12%;
   z-index: 5;
   color: #ddae02;
   font-family: "Courier New", Courier, monospace;
@@ -89,6 +89,6 @@ li {
 
 a {
   text-decoration: none;
-  color: inherit;
+  color: #ddae02;
   font-size: 1em;
 }
