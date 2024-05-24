@@ -16,11 +16,11 @@
             position: fixed;
             top: 50%;
             left: -100%; /* Start off-screen */
-            width: 100vw;
+            width: 50vw;
             height: 50vh;
             background-color: black;
-            transition: left 0.5s ease-out, opacity 0.5s ease-out;
-            opacity: 0; /* Start invisible */
+            transition: left 2s, opacity 1s;
+            opacity: 0.5; /* Start invisible */
             transform: translateY(-50%);
         }
         .visible {
@@ -39,10 +39,18 @@
             const triggerPoint = windowHeight * 0.5; // Trigger when scrolled down 50% of viewport height
 
             const rectangle = document.getElementById('rectangle');
+            // console.log(`Scroll Position: ${scrollPosition}, Trigger Point: ${triggerPoint}`);
+
             if (scrollPosition > triggerPoint) {
-                rectangle.classList.add('visible');
+                if (!rectangle.classList.contains('visible')) {
+                    console.log('Adding visible class');
+                    rectangle.classList.add('visible');
+                }
             } else {
-                rectangle.classList.remove('visible');
+                if (rectangle.classList.contains('visible')) {
+                    console.log('Removing visible class');
+                    rectangle.classList.remove('visible');
+                }
             }
         });
     </script>
