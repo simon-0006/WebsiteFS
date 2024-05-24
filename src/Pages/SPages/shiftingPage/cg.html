@@ -9,7 +9,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            height: 200vh; /* Make the page scrollable */
+            height: 300vh; /* Make the page scrollable */
             overflow-x: hidden; /* Prevent horizontal overflow */
         }
         .rectangle {
@@ -39,16 +39,13 @@
             const triggerPoint = windowHeight * 0.5; // Trigger when scrolled down 50% of viewport height
 
             const rectangle = document.getElementById('rectangle');
-            // console.log(`Scroll Position: ${scrollPosition}, Trigger Point: ${triggerPoint}`);
 
             if (scrollPosition > triggerPoint) {
                 if (!rectangle.classList.contains('visible')) {
-                    console.log('Adding visible class');
                     rectangle.classList.add('visible');
                 }
             } else {
                 if (rectangle.classList.contains('visible')) {
-                    console.log('Removing visible class');
                     rectangle.classList.remove('visible');
                 }
             }
