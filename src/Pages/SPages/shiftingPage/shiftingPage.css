@@ -17,47 +17,45 @@ body {
     position: fixed;
 }
 
+/* Top Class Rectangle */
 .rectangle {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.rectangle1 {
     position: fixed;
-    top: 25%;
-    left: -100%; /* Start off-screen */
-    width: 40vw;
-    height: 20vh;
     background-color: black;
-    transition: left 2s, opacity 1s;
+    transition: left 2s, opacity 1s, transform 0.3s;
     opacity: 0.5; /* Start invisible */
     transform: translateY(-50%);
+}
+
+/* define hover Effekt */
+.rectangle:hover {
+    background-color: rgb(64, 64, 64);
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* define Subclasses Rectanlge 1,2,3 */
+.rectangle1 {
+    top: 25%;
+    left: -100%;
+    width: 40vw;
+    height: 20vh;
 }
 
 .rectangle2 {
-    position: fixed;
     top: 50%;
-    left: 200%; /* Start off-screen */
+    left: 200%;
     width: 50vw;
     height: 40vh;
-    background-color: black;
-    transition: left 2s, opacity 1s;
-    opacity: 0.5; /* Start invisible */
-    transform: translateY(-50%);
     border-radius: 0 0 0 5vmin;
 }
 
 .rectangle3 {
-    position: fixed;
     top: 70%;
-    left: -100%; /* Start off-screen */
+    left: -100%;
     width: 35vw;
     height: 50vh;
-    background-color: black;
-    transition: left 2s, opacity 1s;
-    opacity: 0.5; /* Start invisible */
-    transform: translateY(-50%);
 }
 
 .rectangletext {
