@@ -39,7 +39,7 @@ main {
 
 svg {
   width: 100%;
-  height: 100%;
+  height: 200%;
 
   grid-column: 2;
   grid-row: 1 / -1;
@@ -83,4 +83,29 @@ svg {
 #topStraightLineHead {
   stroke: var(--blue-light);
   stroke-width: 2px;
+}
+
+/**/
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: grid;
+  color: white;
+  background: rgb(4, 0, 24);
+}
+
+.whole-page-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none; /* Remove underline for the link */
 }
