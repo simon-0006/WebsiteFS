@@ -12,6 +12,7 @@ body {
     overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
+/** Rectangle Definition*/
 .rectangle_container {
     position: fixed;
 }
